@@ -15,8 +15,6 @@ function payeeMonthlyRate(grossIncome) {
         payee=grossIncome*0.25;
     }else if (grossIncome>32333){
         payee=grossIncome*0.30;
-    }else{
-        payee
     }
 return payee;
 }
@@ -36,5 +34,28 @@ function nhifDeductionsRate(grossIncome){
         nhifDeductions=grossIncome-600;
     }else if (grossIncome<=24999){
         nhifDeductions=grossIncome-750;
+    }else if (grossIncome<=29999){
+        nhifDeductions=grossIncome-850;
+    }else if (grossIncome<=34999){
+        nhifDeductions=grossIncome-900;
+    }else if (grossIncome<=39999){
+        nhifDeductions=grossIncome-950;
+    }else if (grossIncome<=44999){
+        nhifDeductions=grossIncome-1000;
+    }else if (grossIncome<=49999){
+        nhifDeductions=grossIncome-1100;
+    }else if (grossIncome<=59999){
+        nhifDeductions=grossIncome-1200;
+    }else if (grossIncome<=69999){
+        nhifDeductions=grossIncome-1300;
+    }else if (grossIncome<=79999){
+        nhifDeductions=grossIncome-1400;
+    }else if (grossIncome<=89999){
+        nhifDeductions=grossIncome-1500;
+    }else if (grossIncome<=99999){
+        nhifDeductions=grossIncome-1600;
+    }else{
+        nhifDeductions=grossIncome-1700;
     }
+
 }
