@@ -1,68 +1,63 @@
 
-function netSalaryCalculator(basicSalary,benefits){
-   let grossIncome= basicSalary+benefits;
-   return grossIncome;
-}
-
 function payeeMonthlyRate(grossIncome) {
-    let payee;
+    
     if (grossIncome<24000){
-        payee=0;
+        payeeDeductions=0;
     }
     else if (grossIncome>=24000){
-        payee=grossIncome*0.10;
+        payeeDeductions=0.10;
     }else if (grossIncome>24000&&grossIncome<=32333){
-        payee=grossIncome*0.25;
+        payeeDeductions=0.25;
     }else if (grossIncome>32333){
-        payee=grossIncome*0.30;
+        payeeDeductions=0.30;
     }
-return payee;
+return payeeDeductions;
 }
-console.log(payeeMonthlyRate(2300));
+
 
 function nhifDeductionsRate(grossIncome){
     let nhifDeductions;
     if (grossIncome<=5999) {
-        nhifDeductions=grossIncome-150;
+        nhifDeductions=150;
     } else if (grossIncome<=7999) {
-        nhifDeductions=grossIncome-300;
+        nhifDeductions=300;
     }else if (grossIncome<=11999){
-        nhifDeductions=grossIncome-400;
+        nhifDeductions=400;
     }else if (grossIncome<=14999){
-        nhifDeductions=grossIncome-500;
+        nhifDeductions=500;
     }else if (grossIncome<=19999){
-        nhifDeductions=grossIncome-600;
+        nhifDeductions=600;
     }else if (grossIncome<=24999){
-        nhifDeductions=grossIncome-750;
+        nhifDeductions=750;
     }else if (grossIncome<=29999){
-        nhifDeductions=grossIncome-850;
+        nhifDeductions=850;
     }else if (grossIncome<=34999){
-        nhifDeductions=grossIncome-900;
+        nhifDeductions=900;
     }else if (grossIncome<=39999){
-        nhifDeductions=grossIncome-950;
+        nhifDeductions=950;
     }else if (grossIncome<=44999){
-        nhifDeductions=grossIncome-1000;
+        nhifDeductions=1000;
     }else if (grossIncome<=49999){
-        nhifDeductions=grossIncome-1100;
+        nhifDeductions=1100;
     }else if (grossIncome<=59999){
-        nhifDeductions=grossIncome-1200;
+        nhifDeductions=1200;
     }else if (grossIncome<=69999){
-        nhifDeductions=grossIncome-1300;
+        nhifDeductions=1300;
     }else if (grossIncome<=79999){
-        nhifDeductions=grossIncome-1400;
+        nhifDeductions=1400;
     }else if (grossIncome<=89999){
-        nhifDeductions=grossIncome-1500;
+        nhifDeductions=1500;
     }else if (grossIncome<=99999){
-        nhifDeductions=grossIncome-1600;
+        nhifDeductions=1600;
     }else{
-        nhifDeductions=grossIncome-1700;
+        nhifDeductions=1700;
     }
 return nhifDeductions;
 }
-console.log(nhifDeductionsRate(14000))
 
-function nssfDeductions(basicSalary) {
-   let  nssfPensionable=basicSalary*0.06*2;
+
+function nssfDeductions(grossIncome) {
+   let  nssfPensionable=grossIncome*0.06*2;
    let deductions
  if (nssfPensionable<=6000){
     deductions=360;
@@ -71,4 +66,13 @@ function nssfDeductions(basicSalary) {
  }
 return deductions;
 }
-console.log(nssfDeductions(130000));
+
+
+function netSalaryCalculator(grossIncome) {
+    let payee=payeeMonthlyRate(grossIncome)
+    let nhif=nhifDeductionsRate(grossIncome)
+    let nssf=nssfDeductions(grossIncome)
+    let netSalary=grossIncome-payee-nhif-nssf;
+    return netSalary;
+}
+console.log(netSalaryCalculator(25000));
