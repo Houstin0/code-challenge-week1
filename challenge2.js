@@ -1,9 +1,11 @@
-function speedDetetor(speed) {
+function speedDetetor(speed,demeritPoints) {
     let speedLimit=70;
-    let demeritPoints
+
     if (speed<=70) {
         return 'Ok'
     } else {
+        demeritPoints=(speed-speedLimit)/5;
+        return demeritPoints
         
     }
 }      
