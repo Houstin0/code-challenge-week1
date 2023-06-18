@@ -57,5 +57,18 @@ function nhifDeductionsRate(grossIncome){
     }else{
         nhifDeductions=grossIncome-1700;
     }
-
+return nhifDeductions;
 }
+console.log(nhifDeductionsRate(14000))
+
+function nssfDeductions(basicSalary) {
+   let  nssfPensionable=basicSalary*0.06*2;
+   let deductions
+ if (nssfPensionable<=6000){
+    deductions=360;
+ }else if(nssfPensionable<=18000){
+    deductions=720;
+ }
+return deductions;
+}
+console.log(nssfDeductions(130000));
