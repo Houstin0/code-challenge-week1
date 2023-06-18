@@ -1,4 +1,4 @@
-
+//function calculating payee rate
 function payeeMonthlyRate(grossIncome) {
     
     if (grossIncome<24000){
@@ -14,7 +14,7 @@ function payeeMonthlyRate(grossIncome) {
 return payeeDeductions;
 }
 
-
+//function calculating nhif deductions rate
 function nhifDeductionsRate(grossIncome){
     let nhifDeductions;
     if (grossIncome<=5999) {
@@ -55,7 +55,7 @@ function nhifDeductionsRate(grossIncome){
 return nhifDeductions;
 }
 
-
+//function calculationg nssf deductions
 function nssfDeductions(grossIncome) {
    let  nssfPensionable=grossIncome*0.06*2;
    let deductions
@@ -74,4 +74,4 @@ function netSalaryCalculator(grossIncome) {
     let nssf=nssfDeductions(grossIncome)
     let netSalary=grossIncome-payee-nhif-nssf;
 }
-console.log(netSalaryCalculator(25000));
+console.log(netSalaryCalculator(25000));//displaying net salary

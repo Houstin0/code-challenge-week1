@@ -1,5 +1,6 @@
 
 function studentGradeGenerator(marks) {
+    //if statement to calculate grade
     if (marks<=100&&marks>=79) {
         return 'A';
     } else if (marks>=60){
@@ -12,3 +13,4 @@ function studentGradeGenerator(marks) {
         return 'E';
     }
 }
+console.log(studentGradeGenerator());// to display the results and enter marks
