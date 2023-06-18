@@ -1,4 +1,4 @@
-prompt()
+
 function studentGradeGenerator(marks) {
     if (marks<=100&&marks>=79) {
         return 'A';
