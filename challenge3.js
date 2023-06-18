@@ -73,6 +73,5 @@ function netSalaryCalculator(grossIncome) {
     let nhif=nhifDeductionsRate(grossIncome)
     let nssf=nssfDeductions(grossIncome)
     let netSalary=grossIncome-payee-nhif-nssf;
-    return netSalary;
 }
 console.log(netSalaryCalculator(25000));
