@@ -1,12 +1,12 @@
-
-function studentGradeGenerator(grade) {
-    if (grade<=100&&grade>=79) {
+prompt()
+function studentGradeGenerator(marks) {
+    if (marks<=100&&marks>=79) {
         return 'A';
-    } else if (grade>=60){
+    } else if (marks>=60){
         return 'B';
-    }else if (grade>=49){
+    }else if (marks>=49){
         return 'C';
-    }else if (grade>=40){
+    }else if (marks>=40){
         return 'D';
     }else{
         return 'E';
