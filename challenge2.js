@@ -1,12 +1,14 @@
-function speedDetetor(speed,demeritPoints) {
+function speedDetetor(speed) {
     let speedLimit=70;
 
     if (speed<=70) {
         return 'Ok'
-    } else {
+    } else{
         demeritPoints=(speed-speedLimit)/5;
-        return demeritPoints
-        
+       if (demeritPoints>12){
+        return 'License suspended'
+       }
+        return demeritPoints;
     }
-}      
-console.log(speedDetetor(200));
+}     
+console.log(speedDetetor(90));
