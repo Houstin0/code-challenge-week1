@@ -11,4 +11,4 @@ function speedDetetor(speed) {
         return demeritPoints;
     }
 }     
-console.log(speedDetetor(90));
+console.log(speedDetetor());
