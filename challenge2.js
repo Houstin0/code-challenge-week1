@@ -1,3 +1,5 @@
+let speed =prompt("Enter speed:")
+  return speed
 function speedDetetor(speed) {
     let speedLimit=70;// speed limit
 

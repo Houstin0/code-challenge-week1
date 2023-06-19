@@ -1,3 +1,7 @@
+let basicSalary= prompt("Enter basic salary:");
+let benefits= prompt("Enter benefits:");
+let grossIncome= basicSalary+benefits;
+  return grossIncome;
 //function calculating payee rate
 function payeeMonthlyRate(grossIncome) {
     
