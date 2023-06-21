@@ -1,16 +1,19 @@
+//Prompt the user to enter speed 
 let speed =prompt("Enter speed:")
-  return speed
-function speedDetetor(speed) {
+
+  //function that checks the speed 
+function speedDetector(speed) {
     let speedLimit=70;// speed limit
 
-    if (speed<=70) {
-        return 'Ok'
-    } else{
-        demeritPoints=(speed-speedLimit)/5;
+    if (speed<=speedLimit) {
+        return 'Ok' //prints out okay if speed is below speed limit
+    } else if (speed>speedLimit){
+        let demeritPoints=(speed-speedLimit)/5;
+        
        if (demeritPoints>12){
         return 'License suspended'
-       }
-        return demeritPoints;
+       }else
+       return `Points: ${demeritPoints}`
     }
 }     
-console.log(speedDetetor());
+speedDetector(speed);// call the speedDetector function and pass speed as argument

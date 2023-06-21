@@ -1,7 +1,8 @@
+//prompt the user for basicSalary and benefits inputs
 let basicSalary= prompt("Enter basic salary:");
 let benefits= prompt("Enter benefits:");
 let grossIncome= basicSalary+benefits;
-  return grossIncome;
+  
 //function calculating payee rate
 function payeeMonthlyRate(grossIncome) {
     
@@ -59,7 +60,7 @@ function nhifDeductionsRate(grossIncome){
 return nhifDeductions;
 }
 
-//function calculationg nssf deductions
+//function that calculates nssf deductions
 function nssfDeductions(grossIncome) {
    let  nssfPensionable=grossIncome*0.06*2;
    let deductions
@@ -78,4 +79,4 @@ function netSalaryCalculator(grossIncome) {
     let nssf=nssfDeductions(grossIncome)
     let netSalary=grossIncome-payee-nhif-nssf;
 }
-console.log(netSalaryCalculator(25000));//displaying net salary
+netSalaryCalculator(grossIncome);//calls yje  net salary calculator function
